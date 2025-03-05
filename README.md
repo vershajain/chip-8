@@ -106,7 +106,7 @@ class CHIP8:
         return key_map.get(key, -1)
 
 def create_input_test_program():
-    """Creates a CHIP-8 program that waits for a key press and stops"""
+   
     program = [
         0xF0, 0x0A,    # FX0A: Wait for key press, store in V0
         0x60, 0x01,  # 6001: Set V0 = 1 (confirm keypress works)
