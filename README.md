@@ -81,7 +81,7 @@ class CHIP8:
             return  # No change, so don't print
 
         self.previous_screen = self.screen[:]
-        print(f"📌 Current Value of V0: {hex(self.V[0])}")
+        print(f"Current Value of V0: {hex(self.V[0])}")
 
         for row in range(32):
             print("".join("█" if self.screen[row * 64 + col] else "." for col in range(64)))
