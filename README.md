@@ -4,18 +4,18 @@ import time
 
 class CHIP8:
     def __init__(self, debug=False):
-        self.debug = debug  # Debug mode (toggle with True/False)
-        self.memory = [0] * 4096  # 4KB Memory
-        self.V = [0] * 16  # Registers
-        self.I = 0  # Index Register
-        self.PC = 0x200  # Program Counter starts at 0x200
-        self.SP = 0  # Stack Pointer
-        self.stack = [0] * 16  # Stack
-        self.delay_timer = 0  # Delay Timer
-        self.sound_timer = 0  # Sound Timer
-        self.keys = [0] * 16  # Keypad (16 keys)
-        self.screen = [0] * (64 * 32)  # Screen (64x32 pixels)
-        self.previous_screen = self.screen[:]  # Track changes for drawing
+        self.debug = debug 
+        self.memory = [0] * 4096 
+        self.V = [0] * 16  
+        self.I = 0  
+        self.PC = 0x200  
+        self.SP = 0  
+        self.stack = [0] * 16  
+        self.delay_timer = 0  
+        self.sound_timer = 0 
+        self.keys = [0] * 16  
+        self.screen = [0] * (64 * 32)  
+        self.previous_screen = self.screen[:]  
 
     def load_program(self, program):
         """Load a program into memory at 0x200"""
